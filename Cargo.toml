@@ -1,0 +1,18 @@
+[package]
+name = "nothing"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+maflow = "0.1.0"
+
+[dependencies.x11]
+version = "2.21"
+features = ["xlib"]
+
+[profile.release]
+strip = true
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
